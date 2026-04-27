@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>浪滔天工作室 | 回国网络 | 低延迟大带宽</title>
+    <meta
+      name="description"
+      content="浪滔天工作室提供回国网络、低延迟大带宽优化、RouterOS、OpenWrt、iKuai、星链回国和线路维护服务。"
+    />
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #06101d;
+        --bg-soft: #0b1728;
+        --panel: rgba(12, 24, 40, 0.9);
+        --panel-strong: rgba(10, 20, 34, 0.96);
+        --line: rgba(128, 180, 230, 0.18);
+        --text: #eef6ff;
+        --muted: #a4b9cf;
+        --brand: #2ab6f6;
+        --brand-2: #64f0c8;
+        --brand-3: #8e7dff;
+        --shadow: 0 20px 70px rgba(0, 0, 0, 0.34);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at 10% 10%, rgba(42, 182, 246, 0.18), transparent 28%),
+          radial-gradient(circle at 90% 0%, rgba(100, 240, 200, 0.12), transparent 24%),
+          linear-gradient(180deg, #07111d 0%, #040912 100%);
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .page {
+        width: min(1120px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 32px 0 56px;
+      }
+
+      .hero {
+        position: relative;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 32px;
+        padding: 32px;
+        background:
+          linear-gradient(135deg, rgba(42, 182, 246, 0.12), rgba(100, 240, 200, 0.06)),
+          var(--panel-strong);
+        box-shadow: var(--shadow);
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: auto -10% -40% auto;
+        width: 340px;
+        height: 340px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(142, 125, 255, 0.2), transparent 65%);
+        pointer-events: none;
+      }
+
+      .badge-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 18px;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 8px 14px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.04);
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      h1 {
+        max-width: 760px;
+        margin: 0;
+        font-size: clamp(34px, 5vw, 56px);
+        line-height: 1.08;
+        letter-spacing: -0.03em;
+      }
+
+      .hero-copy {
+        max-width: 760px;
+        margin: 18px 0 0;
+        font-size: 18px;
+        line-height: 1.75;
+        color: var(--muted);
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 28px;
+      }
+
+      .primary-btn,
+      .secondary-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 52px;
+        padding: 0 22px;
+        border-radius: 999px;
+        text-decoration: none;
+        font-weight: 700;
+        transition: transform 0.18s ease, opacity 0.18s ease, background 0.18s ease;
+      }
+
+      .primary-btn {
+        background: linear-gradient(135deg, var(--brand), #55d4ff);
+        color: #04111a;
+      }
+
+      .secondary-btn {
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(255, 255, 255, 0.04);
+        color: var(--text);
+      }
+
+      .primary-btn:hover,
+      .secondary-btn:hover {
+        transform: translateY(-1px);
+      }
+
+      .quick-stats {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 14px;
+        margin-top: 28px;
+      }
+
+      .stat-card {
+        padding: 18px;
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.035);
+      }
+
+      .stat-card strong {
+        display: block;
+        font-size: 24px;
+        margin-bottom: 8px;
+      }
+
+      .stat-card span {
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      .section {
+        margin-top: 24px;
+        padding: 28px;
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        background: var(--panel);
+        box-shadow: var(--shadow);
+      }
+
+      .section h2 {
+        margin: 0 0 16px;
+        font-size: 28px;
+      }
+
+      .section p.lead {
+        margin: 0 0 20px;
+        color: var(--muted);
+        line-height: 1.8;
+      }
+
+      .feature-grid,
+      .audience-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .feature-card,
+      .audience-card {
+        padding: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 22px;
+        background: rgba(255, 255, 255, 0.03);
+      }
+
+      .feature-card h3,
+      .audience-card h3 {
+        margin: 0 0 8px;
+        font-size: 18px;
+      }
+
+      .feature-card p,
+      .audience-card p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      .support-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .support-chip {
+        padding: 10px 14px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.035);
+        color: var(--text);
+      }
+
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      figure {
+        margin: 0;
+        padding: 14px;
+        border-radius: 22px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.03);
+      }
+
+      figure img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 16px;
+      }
+
+      figcaption {
+        margin-top: 12px;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .cta {
+        text-align: center;
+        background:
+          radial-gradient(circle at top, rgba(42, 182, 246, 0.14), transparent 55%),
+          var(--panel-strong);
+      }
+
+      .cta p {
+        max-width: 760px;
+        margin: 0 auto 22px;
+        color: var(--muted);
+        line-height: 1.8;
+      }
+
+      .direct-link {
+        margin-top: 16px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .direct-link a {
+        color: var(--text);
+      }
+
+      @media (max-width: 900px) {
+        .quick-stats,
+        .feature-grid,
+        .audience-grid,
+        .gallery {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .page {
+          width: min(100% - 20px, 100%);
+          padding-top: 20px;
+          padding-bottom: 30px;
+        }
+
+        .hero,
+        .section {
+          padding: 22px;
+          border-radius: 24px;
+        }
+
+        .quick-stats,
+        .feature-grid,
+        .audience-grid,
+        .gallery {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-copy {
+          font-size: 16px;
+        }
+
+        .section h2 {
+          font-size: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <section class="hero">
+        <div class="badge-row">
+          <span class="badge">回国网络</span>
+          <span class="badge">低延迟</span>
+          <span class="badge">大带宽</span>
+          <span class="badge">RouterOS / OpenWrt / iKuai</span>
+          <span class="badge">星链回国</span>
+        </div>
+        <h1>浪滔天工作室<br />回国网络优化与软路由维护</h1>
+        <p class="hero-copy">
+          主打回国网络、低延迟大带宽体验，支持 <strong>RouterOS</strong>、<strong>OpenWrt</strong>、
+          <strong>iKuai</strong>、Linux 软路由配置，以及星链回国、线路整理、带宽优化和长期维护。
+        </p>
+        <div class="hero-actions">
+          <a class="primary-btn" href="https://t.me/Langtaotian_bot" target="_blank" rel="noopener noreferrer">
+            立即联系 @Langtaotian_bot
+          </a>
+          <a class="secondary-btn" href="#samples">查看客户实测截图</a>
+        </div>
+        <div class="quick-stats">
+          <div class="stat-card">
+            <strong>低延迟</strong>
+            <span>围绕回国网络体验做延迟、抖动和丢包优化。</span>
+          </div>
+          <div class="stat-card">
+            <strong>大带宽</strong>
+            <span>关注带宽利用率和高峰期体验，不只看能不能连上。</span>
+          </div>
+          <div class="stat-card">
+            <strong>多方案</strong>
+            <span>支持 RouterOS、OpenWrt、iKuai、Linux 和星链回国场景。</span>
+          </div>
+          <div class="stat-card">
+            <strong>可维护</strong>
+            <span>不只是搭建，也可以继续做巡检、调整和长期维护。</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>我们适合哪些用户</h2>
+        <p class="lead">如果你遇到的是回国网络不好用、软路由规则混乱、延迟高、带宽跑不满，或者想做星链回国和园区回国网络整理，这一类需求都适合直接联系。</p>
+        <div class="audience-grid">
+          <article class="audience-card">
+            <h3>回国网络用户</h3>
+            <p>需要访问国内网站、国内 App、国内视频和国内办公系统，希望体验更稳定。</p>
+          </article>
+          <article class="audience-card">
+            <h3>软路由用户</h3>
+            <p>需要配置或整理 RouterOS、OpenWrt、iKuai、Linux 软路由环境的用户。</p>
+          </article>
+          <article class="audience-card">
+            <h3>已有线路用户</h3>
+            <p>已经有线路，但存在延迟高、波动大、带宽利用率低、维护困难等问题。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>我们主做什么</h2>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <h3>回国网络优化</h3>
+            <p>围绕低延迟、大带宽和稳定性目标，对回国线路和访问体验做整理与优化。</p>
+          </article>
+          <article class="feature-card">
+            <h3>软路由配置</h3>
+            <p>支持 RouterOS、OpenWrt、iKuai、Linux 软路由，整理分流、策略路由、DNS、NAT 和转发规则。</p>
+          </article>
+          <article class="feature-card">
+            <h3>星链回国</h3>
+            <p>支持星链回国网络接入、基础网络整理和后续维护，适合特殊网络环境场景。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>支持设备与方案</h2>
+        <p class="lead">支持新环境搭建，也支持已有环境的修复、整理和持续维护。</p>
+        <div class="support-list">
+          <span class="support-chip">RouterOS</span>
+          <span class="support-chip">OpenWrt</span>
+          <span class="support-chip">iKuai</span>
+          <span class="support-chip">Linux 软路由</span>
+          <span class="support-chip">星链回国</span>
+          <span class="support-chip">园区回国网络</span>
+          <span class="support-chip">线路维护</span>
+          <span class="support-chip">低延迟优化</span>
+          <span class="support-chip">大带宽优化</span>
+        </div>
+      </section>
+
+      <section class="section" id="samples">
+        <h2>客户实测回国带宽示例</h2>
+        <p class="lead">以下为部分客户测速截图示例，用于展示回国网络带宽和延迟表现。实际体验会受地区、运营商、设备和时间段影响。</p>
+        <div class="gallery">
+          <figure>
+            <img
+              src="assets/bandwidth-samples/customer-bandwidth-sample-1.jpg"
+              alt="客户实测回国带宽示例 1"
+            />
+            <figcaption>示例 1：高带宽回国测速截图，适合展示大带宽网络体验。</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="assets/bandwidth-samples/customer-bandwidth-sample-2.jpg"
+              alt="客户实测回国带宽示例 2"
+            />
+            <figcaption>示例 2：低延迟回国测速截图，可直观看到下载和上传表现。</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="assets/bandwidth-samples/customer-bandwidth-sample-3.jpg"
+              alt="客户实测回国带宽示例 3"
+            />
+            <figcaption>示例 3：回国网络测速示例，便于展示日常使用场景下的表现。</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section cta">
+        <h2>直接联系浪滔天工作室</h2>
+        <p>如果你想做回国网络优化、RouterOS / OpenWrt / iKuai 软路由配置、星链回国接入，或者已经有线路但体验不稳定，可以直接通过 Telegram 联系，沟通当前设备、网络环境和实际需求。</p>
+        <a class="primary-btn" href="https://t.me/Langtaotian_bot" target="_blank" rel="noopener noreferrer">
+          打开 Telegram 联系 @Langtaotian_bot
+        </a>
+        <div class="direct-link">
+          备用直达链接：
+          <a href="https://t.me/Langtaotian_bot" target="_blank" rel="noopener noreferrer">
+            https://t.me/Langtaotian_bot
+          </a>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
