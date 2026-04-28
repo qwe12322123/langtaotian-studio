@@ -1,21 +1,54 @@
 # 浪滔天工作室 | 回国VPN | 回国专线 | 单机单IP | 小火箭节点 | v2节点 | 软路由调试 | RouterOS / OpenWrt / iKuai
 
+这个 GitHub 仓库主页就是浪滔天工作室的**主宣传入口**，主打**回国VPN**、**回国专线**、**单机单IP**、**小火箭节点**、**v2节点**、**软路由调试**、`RouterOS`、`OpenWrt`、`iKuai`、星链回国和低延迟大带宽回国网络优化服务。
+
 浪滔天工作室专注于**回国VPN**、**回国专线**、**单机单IP**、**回国网络**、**回国线路优化** 和 **低延迟大带宽网络体验**，承接 `RouterOS`、`OpenWrt`、`iKuai`、Linux 软路由配置，以及**小火箭节点**、**v2节点**、**星链回国**、线路维护、网络优化和软路由调试服务。
 
 最近更新：2026年4月28日  
 联系方式：Telegram [@Langtaotian_bot](https://t.me/Langtaotian_bot)
 
+## GitHub 仓库主入口
+
+- 这个仓库主页主要用来展示回国VPN、回国专线、单机单IP、小火箭节点、v2节点和软路由调试服务
+- 如果你是从 GitHub 搜索进来的，先看这个 README 就够了
+- Pages 页面只作为辅助说明页，不是主宣传入口
+- 直接联系：[@Langtaotian_bot](https://t.me/Langtaotian_bot)
+
 ## 小火箭节点 / v2节点 / 单机单IP
 
 如果你就是通过 GitHub 搜 **小火箭节点**、**v2节点**、**单机单IP**、**回国VPN**、**回国专线** 这些关键词进来的，这个项目就是围绕这些场景整理的中文说明页和服务介绍页。
+
+## 客户实测回国带宽示例
+
+以下为部分客户的回国网络测速截图示例，方便在 GitHub 仓库首页直观看带宽和延迟表现。实际体验会受到所在地区、当地运营商、设备性能、测速时间段和线路配置影响。
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="assets/bandwidth-samples/customer-bandwidth-sample-1.jpg" alt="客户实测回国带宽示例 1 - 回国网络低延迟大带宽测速截图" width="220" />
+      <br />
+      <sub>示例 1：高带宽回国测速截图</sub>
+    </td>
+    <td align="center">
+      <img src="assets/bandwidth-samples/customer-bandwidth-sample-2.jpg" alt="客户实测回国带宽示例 2 - 中国科学技术大学测速截图" width="220" />
+      <br />
+      <sub>示例 2：低延迟回国测速截图</sub>
+    </td>
+    <td align="center">
+      <img src="assets/bandwidth-samples/customer-bandwidth-sample-3.jpg" alt="客户实测回国带宽示例 3 - 回国网络带宽测试示例" width="220" />
+      <br />
+      <sub>示例 3：回国带宽稳定性测速截图</sub>
+    </td>
+  </tr>
+</table>
 
 ## 回国VPN / 回国网络服务介绍
 
 如果你人在海外，想通过**回国VPN**或**回国专线**更稳定地访问中国大陆网络环境，或者你正在找 `iKuai` 回国、`RouterOS` 回国、`OpenWrt` 回国、**单机单IP**、**小火箭节点**、**v2节点**、星链回国这类方案，但现有线路出现延迟高、带宽跑不满、丢包波动大、规则混乱等问题，浪滔天工作室可以提供更偏实战落地的回国VPN与回国网络优化服务。
 
-这个 GitHub 页面主要介绍我们的回国网络服务范围、适合人群、核心优势、支持设备和常见问题，方便用户快速了解是否适合自己的使用场景。
+这个 GitHub 仓库页面主要介绍我们的回国网络服务范围、适合人群、核心优势、支持设备和常见问题，方便用户快速了解是否适合自己的使用场景。
 
-补充页面：
+辅助说明页面：
 
 - [回国VPN关键词说明页](https://langtaotianvpn.github.io/langtaotian-vpn/huiguo-vpn.html)
 - [小火箭节点 / v2节点说明页](https://langtaotianvpn.github.io/langtaotian-vpn/xiaohuojian-v2-jiedian.html)
@@ -80,30 +113,6 @@
 - 软路由已经装好，但规则越来越乱
 - 想做 `RouterOS` 回国网络优化
 - 想做星链回国网络接入
-
-## 客户实测回国带宽示例
-
-以下为部分客户的回国网络测速截图示例，方便直观看带宽和延迟表现。实际体验会受到所在地区、当地运营商、设备性能、测速时间段和线路配置影响。
-
-<table>
-  <tr>
-    <td align="center">
-      <img src="assets/bandwidth-samples/customer-bandwidth-sample-1.jpg" alt="客户实测回国带宽示例 1 - 回国网络低延迟大带宽测速截图" width="220" />
-      <br />
-      <sub>示例 1：高带宽回国测速截图</sub>
-    </td>
-    <td align="center">
-      <img src="assets/bandwidth-samples/customer-bandwidth-sample-2.jpg" alt="客户实测回国带宽示例 2 - 中国科学技术大学测速截图" width="220" />
-      <br />
-      <sub>示例 2：低延迟回国测速截图</sub>
-    </td>
-    <td align="center">
-      <img src="assets/bandwidth-samples/customer-bandwidth-sample-3.jpg" alt="客户实测回国带宽示例 3 - 回国网络带宽测试示例" width="220" />
-      <br />
-      <sub>示例 3：回国带宽稳定性测速截图</sub>
-    </td>
-  </tr>
-</table>
 
 ## 常见问题 FAQ
 
