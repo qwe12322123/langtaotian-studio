@@ -3,34 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>回国VPN | 回国专线 | 单机单IP | 小火箭节点 | v2节点 | 软路由调试 | 浪滔天工作室</title>
+    <title>小火箭节点 | v2节点 | 单机单IP | 回国VPN | 回国专线 | 浪滔天工作室</title>
     <meta
       name="description"
-      content="浪滔天工作室提供回国VPN、回国专线、单机单IP、小火箭节点、v2节点、软路由调试、RouterOS、OpenWrt、iKuai 回国网络优化服务，主打低延迟和大带宽。"
+      content="浪滔天工作室提供小火箭节点、v2节点、单机单IP、回国VPN、回国专线和软路由调试服务，支持 RouterOS、OpenWrt、iKuai，主打低延迟和大带宽。"
     />
     <meta name="robots" content="index,follow,max-image-preview:large" />
-    <link rel="canonical" href="https://langtaotianvpn.github.io/langtaotian-vpn/huiguo-vpn.html" />
-    <meta property="og:title" content="回国VPN | 回国专线 | 单机单IP | 小火箭节点 | v2节点 | 浪滔天工作室" />
+    <link rel="canonical" href="https://langtaotianvpn.github.io/langtaotian-vpn/xiaohuojian-v2-jiedian.html" />
+    <meta property="og:title" content="小火箭节点 | v2节点 | 单机单IP | 回国VPN | 浪滔天工作室" />
     <meta
       property="og:description"
-      content="围绕回国VPN、回国专线、单机单IP、小火箭节点、v2节点、软路由调试提供中文说明页，支持 RouterOS、OpenWrt、iKuai 和线路维护。"
+      content="围绕小火箭节点、v2节点、单机单IP、回国VPN和回国专线的中文说明页，适合承接移动端、软路由和长期维护场景。"
     />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://langtaotianvpn.github.io/langtaotian-vpn/huiguo-vpn.html" />
-    <meta property="og:image" content="https://langtaotianvpn.github.io/langtaotian-vpn/assets/bandwidth-samples/customer-bandwidth-sample-1.jpg" />
+    <meta property="og:url" content="https://langtaotianvpn.github.io/langtaotian-vpn/xiaohuojian-v2-jiedian.html" />
+    <meta property="og:image" content="https://langtaotianvpn.github.io/langtaotian-vpn/assets/bandwidth-samples/customer-bandwidth-sample-2.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "浪滔天工作室回国网络服务",
-        "url": "https://langtaotianvpn.github.io/langtaotian-vpn/huiguo-vpn.html",
-        "provider": {
-          "@type": "Organization",
-          "name": "浪滔天工作室",
-          "url": "https://langtaotianvpn.github.io/langtaotian-vpn/"
-        },
-        "serviceType": "回国VPN、回国专线、单机单IP、小火箭节点、v2节点、软路由调试"
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "小火箭节点适合什么场景",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "小火箭节点更适合移动端和轻量设备接入回国网络场景，重点要看线路稳定性、延迟表现、带宽利用率和后续维护。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "v2节点适合长期使用吗",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "v2节点是否适合长期使用，要结合设备环境、接入方式、软路由协同和线路维护能力来判断。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "单机单IP 和共享线路有什么区别",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "单机单IP更适合重视固定环境、线路独立性和长期稳定性的场景，共享线路则更适合轻量接入和成本优先的需求。"
+            }
+          }
+        ]
       }
     </script>
     <style>
@@ -99,15 +117,13 @@
         text-decoration: none;
       }
 
-      .tag-row,
-      .chip-row {
+      .tag-row {
         display: flex;
         flex-wrap: wrap;
         gap: 10px;
       }
 
-      .tag,
-      .chip {
+      .tag {
         padding: 9px 14px;
         border-radius: 999px;
         border: 1px solid rgba(255, 255, 255, 0.1);
@@ -118,7 +134,7 @@
 
       h1 {
         margin: 16px 0 12px;
-        font-size: clamp(34px, 5vw, 54px);
+        font-size: clamp(32px, 5vw, 52px);
         line-height: 1.08;
         letter-spacing: -0.03em;
       }
@@ -253,101 +269,80 @@
       <section class="hero">
         <div class="top-nav">
           <a href="./">返回首页</a>
-          <a href="./xiaohuojian-v2-jiedian.html">节点说明页</a>
+          <a href="./huiguo-vpn.html">回国VPN说明页</a>
           <a href="./faq.html">查看 FAQ</a>
-          <a href="https://t.me/Langtaotian_bot" target="_blank" rel="noopener noreferrer">联系 Telegram</a>
         </div>
         <div class="tag-row">
-          <span class="tag">回国VPN</span>
-          <span class="tag">回国专线</span>
-          <span class="tag">单机单IP</span>
           <span class="tag">小火箭节点</span>
           <span class="tag">v2节点</span>
+          <span class="tag">单机单IP</span>
+          <span class="tag">回国VPN</span>
+          <span class="tag">回国专线</span>
           <span class="tag">软路由调试</span>
         </div>
-        <h1>回国VPN、回国专线、小火箭节点、v2节点与软路由调试</h1>
+        <h1>小火箭节点、v2节点与单机单IP回国网络</h1>
         <p class="lead">
-          浪滔天工作室主打回国VPN、回国专线、单机单IP、小火箭节点、v2节点和软路由调试服务，核心方向是低延迟、大带宽、长期稳定，以及
-          <strong>RouterOS</strong>、<strong>OpenWrt</strong>、<strong>iKuai</strong> 这类软路由环境的整理和维护。
+          这页专门围绕小火箭节点、v2节点、单机单IP、回国VPN和回国专线做中文说明。浪滔天工作室主打低延迟、大带宽和长期稳定，也支持
+          <strong>RouterOS</strong>、<strong>OpenWrt</strong>、<strong>iKuai</strong> 软路由联动整理。
         </p>
         <div class="actions">
           <a class="primary-btn" href="https://t.me/Langtaotian_bot" target="_blank" rel="noopener noreferrer">
             联系 @Langtaotian_bot
           </a>
-          <a class="secondary-btn" href="./Langtaotian_bot_button.html">打开联系页</a>
+          <a class="secondary-btn" href="./huiguo-vpn.html">查看回国VPN说明</a>
         </div>
       </section>
 
       <section class="section">
-        <h2>回国VPN 和回国专线的重点</h2>
+        <h2>小火箭节点和 v2节点怎么理解</h2>
         <p>
-          回国VPN 和回国专线不是只看能不能连上，更重要的是延迟、丢包、带宽利用率、晚高峰稳定性，以及软路由规则是否清晰。很多用户的问题不是“没有线路”，而是现有回国网络体验不稳定、带宽跑不满、维护麻烦，我们的工作重点就是把这些问题逐项整理到可长期使用的状态。
+          小火箭节点和 v2节点常见于移动端、轻量设备和临时接入场景，但真正影响体验的不是“有没有节点”，而是节点背后的线路质量、晚高峰表现、延迟稳定性、带宽利用率和后续维护。对回国网络来说，节点只是接入形式，线路和调试才是决定体验的关键。
         </p>
       </section>
 
       <section class="section">
-        <h2>关键词对应服务说明</h2>
+        <h2>关键词对应场景</h2>
         <div class="grid">
           <article class="card">
-            <h3>单机单IP</h3>
-            <p>单机单IP 更适合关注固定使用环境、线路独立性和持续稳定性的用户。是否适合上单机单IP，要结合设备结构、目标应用、预算和后续维护方式来看。</p>
-          </article>
-          <article class="card">
             <h3>小火箭节点</h3>
-            <p>小火箭节点更常见于移动端和轻量设备接入场景。我们更关注节点背后的线路质量、低延迟表现和后续可维护性，而不是只做一次性接入。</p>
+            <p>适合移动端、iPhone、iPad 和轻量设备接入场景，重点关注连接稳定、低延迟和维护是否方便。</p>
           </article>
           <article class="card">
             <h3>v2节点</h3>
-            <p>v2节点适合部分回国网络方案，但是否适合长期使用，要结合你的设备环境、使用频率和是否需要和软路由一起统一管理来判断。</p>
+            <p>适合部分回国VPN和回国专线接入方案，是否适合长期使用，要结合设备环境、接入频率和软路由配合方式判断。</p>
+          </article>
+          <article class="card">
+            <h3>单机单IP</h3>
+            <p>更适合重视固定环境、线路独立性和长期稳定性的场景，常用于需要更清晰维护边界的回国网络方案。</p>
           </article>
           <article class="card">
             <h3>软路由调试</h3>
-            <p>软路由调试通常包含分流、策略路由、DNS、NAT、端口转发、规则冲突、带宽利用率、链路切换和故障排查，目标是让环境更稳定、更清晰。</p>
+            <p>如果你的节点已经能连，但体验波动大、规则混乱、带宽跑不满，通常需要配合 RouterOS、OpenWrt、iKuai 继续做软路由调试。</p>
           </article>
         </div>
       </section>
 
       <section class="section">
-        <h2>支持 RouterOS / OpenWrt / iKuai</h2>
-        <p>
-          如果你已经有 RouterOS、OpenWrt、iKuai 或 Linux 软路由环境，我们可以围绕现有环境继续做回国网络优化，而不是强行全部推倒重来。这样更适合已有设备、已有线路、已有规则但运行越来越乱的场景。
-        </p>
-        <div class="chip-row" style="margin-top: 16px;">
-          <span class="chip">RouterOS 回国</span>
-          <span class="chip">OpenWrt 回国</span>
-          <span class="chip">iKuai 回国</span>
-          <span class="chip">策略路由</span>
-          <span class="chip">DNS 整理</span>
-          <span class="chip">NAT 与转发</span>
-          <span class="chip">线路维护</span>
-        </div>
-      </section>
-
-      <section class="section">
-        <h2>常见需求</h2>
+        <h2>适合什么样的用户</h2>
         <div class="list">
-          <div>回国VPN 能连，但晚高峰明显卡顿，希望优化成更低延迟、更稳定的回国网络。</div>
-          <div>回国专线带宽看起来不低，但实际跑不满，希望结合软路由调试做整体优化。</div>
-          <div>已有小火箭节点或 v2节点，但多设备接入和长期维护不方便，希望统一整理。</div>
-          <div>RouterOS、OpenWrt、iKuai 已经跑起来了，但分流、DNS、NAT、规则越来越乱，需要重新梳理。</div>
-          <div>想要单机单IP 或更偏稳定路线的回国方案，希望明确适合自己的部署方式。</div>
+          <div>想找小火箭节点做回国网络接入，但更重视长期稳定和后续维护。</div>
+          <div>已经有 v2节点，但晚高峰卡顿、带宽波动大，希望继续做线路整理和优化。</div>
+          <div>想了解单机单IP 是否更适合自己的使用方式，而不是盲目上更贵的方案。</div>
+          <div>希望把 RouterOS、OpenWrt、iKuai 软路由和移动端节点接入统一整理到一起。</div>
         </div>
       </section>
 
       <section class="section">
-        <h2>更多关键词页面</h2>
+        <h2>和回国VPN / 回国专线的关系</h2>
         <p>
-          如果你更关注小火箭节点、v2节点和单机单IP这类词，可以直接查看独立说明页，搜索引擎也更容易把不同主题拆开理解。
+          小火箭节点和 v2节点更像是接入层，回国VPN和回国专线则更偏整体网络体验。很多时候节点本身没问题，但回国VPN和回国专线的质量、软路由规则和后续维护不到位，体验一样会差。所以更重要的是把节点、线路和软路由环境一起看。
         </p>
-        <div class="actions" style="margin-top: 18px;">
-          <a class="secondary-btn" href="./xiaohuojian-v2-jiedian.html">打开小火箭节点 / v2节点说明页</a>
-        </div>
       </section>
 
       <section class="section cta">
-        <h2>直接沟通当前环境</h2>
+        <h2>直接沟通当前设备和线路</h2>
         <p>
-          如果你现在就在找回国VPN、回国专线、单机单IP、小火箭节点、v2节点或软路由调试方案，可以直接把设备类型、网络环境和遇到的问题发过来，我们会按现有环境判断更合适的整理方式。
+          如果你现在就在找小火箭节点、v2节点、单机单IP、回国VPN或回国专线，可以直接把设备类型、现有接入方式和遇到的问题发过来，我们会按现有环境判断更适合的整理方案。
         </p>
         <a class="primary-btn" href="https://t.me/Langtaotian_bot" target="_blank" rel="noopener noreferrer">
           打开 Telegram 联系 @Langtaotian_bot

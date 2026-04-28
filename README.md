@@ -5,6 +5,10 @@
 最近更新：2026年4月28日  
 联系方式：Telegram [@Langtaotian_bot](https://t.me/Langtaotian_bot)
 
+## 小火箭节点 / v2节点 / 单机单IP
+
+如果你就是通过 GitHub 搜 **小火箭节点**、**v2节点**、**单机单IP**、**回国VPN**、**回国专线** 这些关键词进来的，这个项目就是围绕这些场景整理的中文说明页和服务介绍页。
+
 ## 回国VPN / 回国网络服务介绍
 
 如果你人在海外，想通过**回国VPN**或**回国专线**更稳定地访问中国大陆网络环境，或者你正在找 `iKuai` 回国、`RouterOS` 回国、`OpenWrt` 回国、**单机单IP**、**小火箭节点**、**v2节点**、星链回国这类方案，但现有线路出现延迟高、带宽跑不满、丢包波动大、规则混乱等问题，浪滔天工作室可以提供更偏实战落地的回国VPN与回国网络优化服务。
@@ -14,6 +18,7 @@
 补充页面：
 
 - [回国VPN关键词说明页](https://langtaotianvpn.github.io/langtaotian-vpn/huiguo-vpn.html)
+- [小火箭节点 / v2节点说明页](https://langtaotianvpn.github.io/langtaotian-vpn/xiaohuojian-v2-jiedian.html)
 - [中文 FAQ 页面](https://langtaotianvpn.github.io/langtaotian-vpn/faq.html)
 
 ## 我们服务谁
