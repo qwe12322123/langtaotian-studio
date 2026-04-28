@@ -177,8 +177,6 @@
 ## 联系方式
 
 - Telegram: [@Langtaotian_bot](https://t.me/Langtaotian_bot)
-- 联系按钮页: [Langtaotian_bot_button.html](Langtaotian_bot_button.html)
-- 关键词说明页: [huiguo-vpn.html](huiguo-vpn.html)
 
 ## 关键词
 
